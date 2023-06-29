@@ -23,10 +23,30 @@ footer {
   padding-bottom: 30px;
   cursor: pointer;
 }
+/* 애니메이션 넣어줄때, 아이콘 둥둥 떠다니게 */
+@keyframes icons-둥둥 {
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  700% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
 /* footer 아이콘 class값을 줘서 조절 */
 .footer-icons__img {
   width: 30px;
+}
+
+/* 마우스가 호버되었을 때 효과 주기 아이콘블락에 효과를 줌*/
+.footer-icons:hover .footer-icons__img {
+  animation: 1s icons-둥둥;
 }
 
 /* 폰트 사이즈에 class값을 줘서 조절 */
