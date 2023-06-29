@@ -4,6 +4,12 @@
 @import "footer.css";
 @import "main.css"; */
 
+/* 색상을 변수로 생성 */
+:root {
+  --button-primary: #fe6f0f;
+  --button-hover: rgba(254, 111, 15, 0.8);
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
     "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI",
@@ -29,6 +35,6 @@ body {
 
 @media screen and (max-width: 500px) {
   .media-info-msg {
-    opacity: 0;
+    display: none;
   }
 }
