@@ -1,0 +1,45 @@
+<!-- 만약 이런 요청을 받게 되면? Flexbox 사용박스 위치를 화면의 가운데로 옮겨주세요.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- display : inline-block이라는 옵션을 주면 한라인에 일자로 배치가능-->
+    <!-- display : flex라는 옵션을 주게되면 div들이 쭉 배치되는 것을 알 수 있다.-->
+    <!-- flexbox란? 상위 요소에 옵션을 주게 되면 내부의 요소들이 특정 배치를 갖게 되는 요소 -->
+    <!-- justify-content : center; 값을 주게되면 메인축윽 main-axis 기준으로 배치하는 옵션으로 가로값으로 중앙에 배치되게 된다 -->
+    <!-- justify-content : start, end 등으로 활용 가능 -->
+    <!-- align-items: center; 값을 주게되면 세로축 값으로 중앙에 배치되게 된다. -->
+    <!-- flexbox는 가로축이 main축 방향이고, 세로축이 cross-axis 방향이다. -->
+    <!-- 위에서 아래로 배치되게 하고 싶다면 flex - direction : column; 값을 주면된다 -->
+    <!--  align-items : center; 는 corss-axis 방향을 기준으로 중앙정렬한다. -->
+    <!-- 박스의 위치를 조정하는 방법 position 다양한 옵션 존재 1. static 2. relative 3. absolute : 절대 위치 4. sticky -->
+    <!--position absolute 옵션은 사의 요소중에서 상위 relative 옵션을 가진 기준으로 세팅해준다.  -->
+    <!-- point : main을 기준으로 떨어트리게 만들어 주고 싶다면 <main></main> 안에 position : relative 값을 선언해주면됨 -->
+    <!-- position fixed는 보여지는 화면을 기준으로 배치가 되게 된다 -->
+    <style>
+      main {
+        width: 1500px;
+        height: 1500px;
+        border: 1px solid red;
+      }
+      div {
+        width: 50px;
+        height: 50px;
+        background-color: tomato;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>글쓰기</div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+main {
+  padding: 30px 20px 30px 20px;
+}
+
+.items-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ededef;
+  padding: 20px 0 20px 0;
+}
+
+.item-list__img {
+  width: 150px;
+  height: 150px;
+  /* 불투명 값까지 해줄 수 있음 */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* 이미지 양쪽을 좀 깎아줌 */
+  border-radius: 12px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* item list 에 있는 img 사이즈 조정 */
+.item-list__img img {
+  width: 50px;
+}
+
+.item-list__info {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+/* item list info에 있는 div에다가 margin값을 넣어주는 작업 */
+.item-list__info div {
+  margin-top: 10px;
+}
+
+.item-list__info-meta {
+  font-size: small;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.item-list__info-price {
+  font-weight: bold;
+}
+
+/* 버튼 꾸미기 */
+.write-btn {
+  background-color: #fe6f0f;
+  color: white;
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px;
+  font-size: 15px;
+  /* position 고정시키기 */
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

@@ -1,0 +1,38 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  border-top: 1px solid #eaeaea;
+  padding-top: 20px;
+  background-color: #fcf9f9;
+}
+
+.footer-block {
+  display: flex;
+  /* 하단바 간격을 넓게 만들어주는 역할 */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 0 10px;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+/* footer 아이콘 class값을 줘서 조절 */
+.footer-icons__img {
+  width: 30px;
+}
+
+/* 폰트 사이즈에 class값을 줘서 조절 */
+.footer-icons__desc {
+  margin-top: 5px;
+  font-weight: bold;
+  /* scale을 줘서 스케일을 주릴 수 있다. */
+  transform: scale(0.8);
+}
