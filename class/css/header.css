@@ -5,7 +5,7 @@ header {
   padding-bottom: 10px;
 }
 
-/* infobar css 함수 별도로 생성시켜주기 */
+/* 인포바 css 함수 별도로 생성시켜주기 */
 .info-bar {
   display: flex;
   /* space- between의 경우 양옆으로 배치*/
