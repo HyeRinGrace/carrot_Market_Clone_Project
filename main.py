@@ -52,6 +52,22 @@ async def get_image(item_id):
                               """).fetchone()[0]#fetchone은 0번째 index를 넣어준다.
     return Response(content=bytes.fromhex(image_bytes)) #이미지 byte를 가져와서 이거를 해석을 한 뒤 컨텐츠로 response하겠다.
 
+# signup html 받기 post 값으로 보내기
+@app.post('/signup')
+# id를 문자열로 폼데이터를 통해 보낼 것이다라는 선언
+def signup(id:Annotated[str,Form()], 
+           password:Annotated[str,Form()],
+           name:Annotated[str,Form()],
+           email:Annotated[str,Form()]):
+    # 받은 정보를 데이터에 입력
+    cur.execute(f"""
+                INSERT INTO users(id,name,email,password)
+                VALUES ('{id}','{name}','{email}','{password}')
+                """)
+    con.commit()
+    return '200'
+
+
 # app.mount는 루트 경로라 이 위에 서버 생성해줘야함
 app.mount("/", StaticFiles(directory="frontend",
           html=True), name="frontend")
