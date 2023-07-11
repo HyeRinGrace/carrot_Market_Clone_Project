@@ -4,7 +4,6 @@ const form = document.getElementById("write-form");//와 이거 쿼리 셀렉터
 
 const handleSubmitForm = async(event) => {
     event.preventDefault();
-
     //body 변수 선언 FormDate(form)
     const body = new FormData(form);
     // 시간값을 넣어주는 소스 코드

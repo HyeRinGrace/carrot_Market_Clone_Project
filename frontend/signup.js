@@ -22,18 +22,19 @@ const handleSubmit = async(event) => {
     formData.set('password',sha256Password);
     const div = document.querySelector("#info");// 비밀번호 불일치 시, div html id 값 불러와 컬러값과 텍스트 출력되도록
 
-
     //Data를 보내기 전에 password확인이 일치한지 추가
     if(checkPassword()){
-        const res = await fetch('/signup',{
+        const res = await fetch("/signup",{
             method: "post",
             body : formData,
         });
         const data = await res.json();
+        
         if(data === "200"){
             // div.innerText = "회원가입에 성공했습니다."; //비밀번호 일치하지 않다는 문구 뜨고 일치했을 떄, 없애주기위해
             // div.style.color = "blue";
-            alert("회원 가입에 성공했습니다.");
+            div.innerText = "회원 가입에 성공했습니다.";
+            div,style.color = "blue";
             window.location.pathname = "/login.html"; // login시 로그인 페이지로 이동
         }
     }else{
